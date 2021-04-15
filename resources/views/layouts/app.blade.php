@@ -1,6 +1,6 @@
 <html>
     <head>
-        <title>Vivify Blog</title>
+        <title>@yield('title')</title>
         <style>
             body {
                 font-family: 'Nunito', sans-serif;
@@ -10,9 +10,7 @@
     <body>
         <h2>Posts</h2>
         <ul>
-            @foreach ($posts as $post)
-                <li><a href="/posts/{{$post->id}}">{{$post->title}}</a> </li>
-            @endforeach
+            @yield('content')
         </ul>
     </body>
 </html>
